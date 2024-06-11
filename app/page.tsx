@@ -18,23 +18,27 @@ export default function Home() {
   async function fetchCollage() {
     // call api which returns an excel file
     setLoading(true);
-    const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        rank: rank,
-        category: category,
-      }),
-    });
-    const data = await response.blob();
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          rank: rank,
+          category: category,
+        }),
+      });
+      const data = await response.blob();
 
-    const url = window.URL.createObjectURL(data);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "collage.xlsx";
-    link.click();
+      const url = window.URL.createObjectURL(data);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "collage.xlsx";
+      link.click();
+    } catch (error) {
+      console.log("error", error);
+    }
     setLoading(false);
   }
 
