@@ -16,7 +16,7 @@ export default function Home() {
 
   async function fetchCollage() {
     // call api which returns an excel file
-    const response = await fetch("http://localhost:5000/process", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
