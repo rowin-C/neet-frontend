@@ -18,8 +18,9 @@ export default function Home() {
   async function fetchCollage() {
     // call api which returns an excel file
     setLoading(true);
+
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
+      const response = await fetch("http://rowinc.pythonanywhere.com/process", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
