@@ -20,7 +20,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
