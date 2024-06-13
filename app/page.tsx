@@ -20,19 +20,16 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://rowinc.pythonanywhere.com/process",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            rank: rank,
-            category: category,
-          }),
-        }
-      );
+      const response = await fetch(`${process.env.NEXT_PUBLIC_LINK}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          rank: rank,
+          category: category,
+        }),
+      });
       const data = await response.blob();
 
       const url = window.URL.createObjectURL(data);
