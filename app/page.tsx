@@ -130,7 +130,7 @@ export default function Home() {
               // onClick={fetchCollage}
               onClick={() => {
                 timerCount();
-                // fetchCollage();
+                fetchCollage();
                 setLoading(true);
                 setViewBox(true);
                 setTimer("00:00");
