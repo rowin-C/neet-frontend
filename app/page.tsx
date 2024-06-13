@@ -20,7 +20,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
+      const response = await fetch("api/backend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
