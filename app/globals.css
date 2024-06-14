@@ -18,10 +18,6 @@
   font-variation-settings: "MORF" 15, "SHLN" 50;
 }
 
-html {
-  overflow: hidden;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;

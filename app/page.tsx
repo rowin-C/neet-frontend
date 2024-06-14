@@ -46,6 +46,15 @@ export default function Home() {
 
   async function fetchCollage() {
     // call api which returns an excel file
+    if (rank === undefined || category === "") {
+      alert("Please enter rank and category");
+      return;
+    }
+
+    timerCount();
+    setLoading(true);
+    setViewBox(true);
+    setTimer("00:00");
 
     try {
       const response = await fetch(
@@ -69,7 +78,7 @@ export default function Home() {
       link.download = "collage.xlsx";
       link.click();
     } catch (error) {
-      console.log("error", error);
+      alert(error);
     }
     setLoading(false);
     setViewBox(false);
@@ -129,16 +138,14 @@ export default function Home() {
             <div
               // onClick={fetchCollage}
               onClick={() => {
-                timerCount();
                 fetchCollage();
-                setLoading(true);
-                setViewBox(true);
-                setTimer("00:00");
               }}
-              className="group relative md:w-1/3 px-3 py-2 mx-auto inline-flex  items-center justify-center overflow-hidden rounded-md bg-gradient-to-t from-pink-500 from-10% to-amber-300 font-medium text-neutral-200"
+              className="group relative md:w-1/3 px-3 py-2 mx-auto inline-flex  items-center justify-center overflow-hidden rounded-md bg-gradient-to-t from-pink-500 from-10% to-amber-300 font-medium text-white"
             >
               <Dialog>
-                <DialogTrigger>
+                <DialogTrigger
+                  disabled={loading || rank === undefined || category === ""}
+                >
                   {" "}
                   <span>{loading ? "Scanning..." : "Fetch Collage"}</span>
                 </DialogTrigger>
