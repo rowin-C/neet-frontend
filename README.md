@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEET Counseling Tool 🏫
 
-## Getting Started
+Welcome to the NEET Counseling Tool! This tool helps NEET students figure out which colleges they can get into based on their rank. The idea was inspired by a [Reddit post](https://www.reddit.com/r/indianmedschool/comments/15f1oqz/i_have_created_a_collection_of_college_wise_final/) by [u/CarbonylChloride](https://www.reddit.com/user/CarbonylChloride/) that shared a collection of 400+ colleges with their opening and closing ranks.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Scan through 400+ colleges to find eligible ones based on your rank.
+- Simple Python script 🐍 scans PDFs for keywords.
+- Takes about 3 minutes ⏳ to provide results.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository:**
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/neet-counseling-tool.git
+   cd neet-counseling-tool/frontend
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Run the development server:**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Open your browser and navigate to:**
+   ```bash
+   http://localhost:3000
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Contributing
+
+Feel free to fork the repository and submit pull requests. We welcome contributions to improve the tool!
+
+# Feedback
+
+We'd love to hear your feedback! Please share your thoughts and suggestions by creating an issue or contributing directly.
