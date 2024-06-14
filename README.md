@@ -15,7 +15,7 @@ Welcome to the NEET Counseling Tool! This tool helps NEET students figure out wh
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/neet-counseling-tool.git
+   git clone https://github.com/rowin-C/neet-frontend.git
    cd neet-counseling-tool/frontend
    ```
 
