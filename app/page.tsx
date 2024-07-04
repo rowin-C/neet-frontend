@@ -82,6 +82,7 @@ export default function Home() {
     }
     setLoading(false);
     setViewBox(false);
+    setTimer("00:00");
   }
 
   return (
